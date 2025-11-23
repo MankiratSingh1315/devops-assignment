@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 class Calculator {
@@ -32,6 +33,10 @@ public:
             return 0;
         }
     }
+    
+    double power(double base, double exponent) {
+        return pow(base, exponent);
+    }
 };
 
 int main() {
@@ -45,7 +50,8 @@ int main() {
     cout << "3. Multiplication" << endl;
     cout << "4. Division" << endl;
     cout << "5. Modulo" << endl;
-    cout << "Enter your choice (1-5): ";
+    cout << "6. Power" << endl;
+    cout << "Enter your choice (1-6): ";
     cin >> choice;
     
     cout << "Enter first number: ";
@@ -68,6 +74,9 @@ int main() {
             break;
         case 5:
             cout << "Result: " << calc.modulo((int)num1, (int)num2) << endl;
+            break;
+        case 6:
+            cout << "Result: " << calc.power(num1, num2) << endl;
             break;
         default:
             cout << "Invalid choice!" << endl;
